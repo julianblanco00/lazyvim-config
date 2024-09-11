@@ -52,7 +52,7 @@ return {
           { name = 'luasnip' },
         },
         completion = {
-          -- autocomplete = false
+          autocomplete = false
         },
         mapping = cmp.mapping.preset.insert({
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
