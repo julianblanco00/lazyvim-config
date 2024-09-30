@@ -6,10 +6,8 @@
 local map = LazyVim.safe_keymap_set
 
 -- SHIFT + DELETE to delete current word:
-map('n', '<S-BS>', 'daw', { noremap = true, silent = true })
+map('n', '<S-BS>', 'vb"_d', { noremap = true, silent = true })
 map('i', '<S-BS>', '<Esc>daw', { noremap = true, silent = true })
 
--- CMD + delete to delete current line:
-map('n', '<D-Del>', 'v0d', { noremap = true, silent = true })
-map('i', '<D-Del>', '<Esc>v0d', { noremap = true, silent = true })
+map('v', '<C-n>', 'y/<C-r>"<CR>Ncgn', { noremap = true, silent = true })
 
