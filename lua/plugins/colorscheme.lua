@@ -1,14 +1,11 @@
 function ColorMyPencils(color)
     color = color or "rose-pine"
     vim.cmd.colorscheme(color)
+    vim.cmd("highlight Normal guibg=#000")
 end
 
 
 return {
-	--  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	--  {
-	-- 	"tokyonight.nvim",
-	-- },
   	{
 		"LazyVim/LazyVim",
 		opts = {
@@ -36,12 +33,11 @@ return {
         "rose-pine/neovim",
         name = "rose-pine",
         config = function()
-            require("rose-pine").setup({ 
-              disable_background = false, 
-              
-              styles = { 
+            require("rose-pine").setup({
+              disable_background = true,
+              styles = {
                 keywords = { italic = false },
-              } 
+              }
             })
 
             vim.cmd("colorscheme rose-pine")
