@@ -12,9 +12,13 @@ local map = LazyVim.safe_keymap_set
 map('v', '<C-n>', 'y/<C-r>"<CR>Ncgn', { noremap = true, silent = true })
 
 map('n', '<leader>dd', '"_dd', { noremap = true, silent = true })
+map('n', '<leader>dw', '"_dw', { noremap = true, silent = true })
 
 map('n', '{', '<C-u>', { noremap = true, silent = true })
 map('n', '}', '<C-d>', { noremap = true, silent = true })
+
+map('n', '<C-e>', '5<C-e>', { noremap = true, silent = true })
+map('n', '<C-y>', '5<C-y>', { noremap = true, silent = true })
 
 map('n', '0', '^', { noremap = true, silent = true })
 
