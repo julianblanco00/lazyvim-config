@@ -4,7 +4,6 @@
 vim.api.nvim_create_autocmd({ "BufReadPost" }, {
   callback = function()
     vim.cmd("set scroll=5")
-    vim.cmd("set tabstop=4")
   end,
 })
 
